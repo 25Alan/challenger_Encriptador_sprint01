@@ -25,8 +25,8 @@
     <main>
         <section id="input">
             <textarea name="inputText" id="inputText" cols="30" rows="10"
-                placeholder="INGRESAR TEXTO SIN ACENTOS Y MINUSCULAS"></textarea>
-            <button class="button">ENCRIPTAR</button>
+                placeholder="INGRESAR TEXTO SIN ACENTOS Y MINUSCULAS" required></textarea>
+            <button class="button" id="buttonInput">ENCRIPTAR</button>
         </section>
 
         <section id="image">
@@ -34,11 +34,11 @@
         </section>
 
         <section id="output">
-            <textarea name="outputText" id="outputText" cols="30" rows="10"></textarea>
+            <textarea name="outputText" id="outputText" cols="30" rows="10" readonly></textarea>
 
             <div id="container">
-                <button class="button">DESENCRIPTAR</button>
-                <button class="button">COPY</button>
+                <button class="button" id="buttonDesencriptar">DESENCRIPTAR</button>
+                <button class="button" id="buttonCopy">COPY</button>
             </div>
         </section>
     </main>
@@ -46,6 +46,8 @@
     <footer>
         Romero Alan - Github : 25Alan
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
