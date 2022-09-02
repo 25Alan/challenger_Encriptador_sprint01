@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(228, 53%, 19%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+header {
+  width: 100vw;
+  height: 10%;
+  background-color: hsl(0, 0%, 0%);
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Anek Telugu', sans-serif;
+
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#inputText {
+  background-color: hsl(0, 0%, 0%);
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 2px solid hsl(99, 96%, 51%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+#inputText:focus {
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(136, 89%, 45%);
+}
+
+.button {
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  border: 2px none hsl(99, 96%, 51%);
+  border-radius: 3px;
+  background-color: hsl(99, 96%, 51%);
+}
+
+#outputText {
+  background-color: hsl(36, 100%, 51%);
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 2px solid hsl(99, 96%, 51%);
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+}
+
+#outputText:focus {
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(136, 89%, 45%);
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer{
+    font-size: 1.2rem;
+    color: white;
+    background-color: hsl(0, 0%, 0%);
+    text-align: center;
+}
