@@ -22,8 +22,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Anek Telugu', sans-serif;
-
+  font-family: "Anek Telugu", sans-serif;
 }
 
 header h1 {
@@ -63,12 +62,28 @@ main {
   background-color: hsl(136, 89%, 45%);
 }
 
+#containerbuttonInput {
+  width: 100%;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
 .button {
   padding: 0.2rem;
   font-size: 1.5rem;
   border: 2px none hsl(99, 96%, 51%);
   border-radius: 3px;
   background-color: hsl(99, 96%, 51%);
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #outputText {
@@ -85,15 +100,9 @@ main {
   background-color: hsl(136, 89%, 45%);
 }
 
-#container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-footer{
-    font-size: 1.2rem;
-    color: white;
-    background-color: hsl(0, 0%, 0%);
-    text-align: center;
+footer {
+  font-size: 1.2rem;
+  color: white;
+  background-color: hsl(0, 0%, 0%);
+  text-align: center;
 }
