@@ -1,28 +1,33 @@
-const inputTexto = document.getElementById("inputText");
+const inputText = document.getElementById("inputText");
 const outputText = document.getElementById("outputText");
 
-const buttonInput = document.querySelector("#buttonInput");
-const buttonOutput = document.querySelector("#buttonOutput");
+const buttonEncriptar = document.querySelector("#buttonInput");
+const buttonDesencriptar = document.querySelector("#buttonOutput");
+const buttonCopy = document.querySelector('#buttonCopy');
 
+/**
+ * 
+ * @param {String} stringInput El texto que desea encriptar
+ * @returns String ya cifrado
+ */
 function encriptar(stringInput) {
-  let matrizCodigo = [
-    ["e", "enter"],
-    ["i", "imes"],
-    ["a", "ai"],
-    ["o", "ober"],
-    ["u", "ufat"],
+  let matrizCifrado = [
+    ["a","ai"],
+    ["e","enter"],
+    ["i","imes"],
+    ["o","ober"],
+    ["u","ufat"],
   ];
-
 
   stringInput = stringInput.toLowerCase();
   stringInput = removeAcentos(stringInput);
 
   console.log(stringInput);
-  for (let i = 0; i < matrizCodigo.length; i++) {
-    if (stringInput.includes(matrizCodigo[i][0])) {
+  for (let i = 0; i < matrizCifrado.length; i++) {
+    if (stringInput.includes(matrizCifrado[i][0])) {
       stringInput = stringInput.replaceAll(
-        matrizCodigo[i][0],
-        matrizCodigo[i][1]
+        matrizCifrado[i][0],
+        matrizCifrado[i][1]
       );
       console.log(stringInput);
     }
@@ -30,20 +35,28 @@ function encriptar(stringInput) {
   return stringInput;
 }
 
+/**
+ * 
+ * @param {String} stringDesencriptar String para desencriptar
+ * @returns String desencriptado
+ */
 function desencriptar(stringDesencriptar) {
-  let matrizCodigo = [
-    ["e", "enter"],
-    ["i", "imes"],
-    ["a", "ai"],
-    ["o", "ober"],
-    ["u", "ufat"],
+  let matrizDecifrado = [
+    ["ai","a"],
+    ["enter","e"],
+    ["imes","i"],
+    ["ober","o"],
+    ["ufat","u"],
   ];
+  
   stringDesencriptar = stringDesencriptar.toLowerCase();
-  for (let i = 0; i < matrizCodigo.length; i++) {
-    if (stringDesencriptar.includes(matrizCodigo[i][1])) {
+  stringDesencriptar = removeAcentos(stringDesencriptar);
+
+  for (let i = 0; i < matrizDecifrado.length; i++) {
+    if (stringDesencriptar.includes(matrizDecifrado[i][1])) {
       stringDesencriptar = stringDesencriptar.replaceAll(
-        matrizCodigo[i][1],
-        matrizCodigo[i][0]
+        matrizDecifrado[i][1],
+        matrizDecifrado[i][0]
       );
     }
   }
@@ -51,6 +64,11 @@ function desencriptar(stringDesencriptar) {
   return stringDesencriptar;
 }
 
+/**
+ * 
+ * @param {String} stringModificado Para sacar los acentos
+ * @returns String sin acentos
+ */
 function removeAcentos(stringModificado) {
   var chars = {
     á: "a",
@@ -83,11 +101,14 @@ function removeAcentos(stringModificado) {
   return res;
 }
 
-buttonInput.addEventListener("click", () => {
-  const textCifrdado = encriptar(inputTexto.value.toLowerCase());
-  outputText.innerHTML = textCifrdado;
+buttonEncriptar.addEventListener("click", () => {
+  outputText.innerHTML = encriptar(inputText.value);
+});
+
+buttonDesencriptar.addEventListener('click', () => {
+  outputText.innerHTML = desencriptar(inputText.value);
 });
 
 /* 
-  /^[a-zA-Z\u00C0-\u017F]+$/.test(name))
+  /^[a-zA-Z\u00C0-\u017F]+$/.test(name)) CÓDIGO REGEX ALTERNATIVO PARA LA BUSQUEDA DE ACENTOS EN UN STRING
 */
