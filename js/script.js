@@ -1,6 +1,8 @@
+import { responsiveMedia } from "./responsive.js";
+
 const buttonEncriptar = document.querySelector("#buttonInput");
 const buttonDesencriptar = document.querySelector("#buttonOutput");
-const buttonCopy = document.querySelector('#buttonCopy');
+const buttonCopy = document.querySelector("#buttonCopy");
 
 function encriptarText() {
   let textResult = document.querySelector("#inputText").value;
@@ -39,7 +41,7 @@ function desencriptarText() {
 }
 
 function copyText() {
-  const copyText = document.querySelector('#outputText').textContent;
+  const copyText = document.querySelector("#outputText").textContent;
   navigator.clipboard.writeText(copyText);
 }
 
@@ -75,6 +77,17 @@ function removeAcentos(stringModificado) {
   return res;
 }
 
-buttonEncriptar.addEventListener("click", encriptarText);
-buttonDesencriptar.addEventListener("click", desencriptarText);
-buttonCopy.addEventListener('click',copyText);
+document.addEventListener("DOMContentLoaded", () => {
+  buttonEncriptar.addEventListener("click", encriptarText);
+  buttonDesencriptar.addEventListener("click", desencriptarText);
+  buttonCopy.addEventListener("click", copyText);
+  // responsiveMedia(
+  //   "image",
+  //   "(min-width: 1024px)",
+  //   "",
+  //   "ContenidoEscritorio"
+  // );
+});
+
+// DIFERENCIA ENTRE LOAD Y DOMCONTENTLOADED
+//DOMContentLoaded – el navegador HTML está completamente cargado y el árbol DOM está construido, pero es posible que los recursos externos como <img> y hojas de estilo aún no se hayan cargado. load – no solo se cargó el HTML, sino también todos los recursos externos: imágenes, estilos, etc

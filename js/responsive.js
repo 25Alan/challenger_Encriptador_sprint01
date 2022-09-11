@@ -1,9 +1,23 @@
-const mqList = window.matchMedia('(min-width: 768px');
+function responsiveMedia (id,mq,mobileContent,desktopContent){
+    let breakPoint = window.matchMedia(mq);
 
-console.log(mqList);
+    const responsive = (e) => {
+        if(e.matches) document.getElementById(id).innerHTML = desktopContent;
+        else document.getElementById(id).innerHTML = mobileContent;
+    };
 
-console.log(mqList.matches);
+    breakPoint.addEventListener('change', responsive);
+    responsive(breakPoint);
+}
 
-mqList.addEventListener('change', (e) => {
-    console.log('mq match did change',e.matches);
-});
+export { responsiveMedia };
+
+// const mqList = window.matchMedia('(min-width: 768px');
+
+// console.log(mqList);
+
+// console.log(mqList.matches);
+
+// mqList.addEventListener('change', (e) => {
+//     console.log('mq match did change',e.matches);
+// });

@@ -107,3 +107,13 @@ footer {
   background-color: hsl(0, 0%, 0%);
   text-align: center;
 }
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  #image {
+    width: 40rem;
+    position: absolute;
+    z-index: -1;
+  }
+}
