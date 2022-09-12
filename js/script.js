@@ -81,12 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
   buttonEncriptar.addEventListener("click", encriptarText);
   buttonDesencriptar.addEventListener("click", desencriptarText);
   buttonCopy.addEventListener("click", copyText);
-  // responsiveMedia(
-  //   "image",
-  //   "(min-width: 1024px)",
-  //   "",
-  //   "ContenidoEscritorio"
-  // );
+  responsiveMedia(
+    "h1",
+    "(min-width: 1024px)",
+    `<h1>ENCRIPTADOR - MOBILE</h1>`,
+    `<h1>ENCRIPTADOR - ESCRITORIO</h1>`
+  );
 });
 
 // DIFERENCIA ENTRE LOAD Y DOMCONTENTLOADED
