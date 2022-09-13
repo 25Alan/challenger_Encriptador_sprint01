@@ -14,8 +14,7 @@ body {
 
 header {
   width: 100vw;
-  height: 10%;
-  background-color: hsl(0, 0%, 0%);
+  height: 15vh;
   font-size: 2rem;
 
   display: flex;
@@ -33,7 +32,7 @@ header h1 {
 
 main {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -102,35 +101,18 @@ main {
 }
 
 footer {
+  height: 5vh;
   font-size: 1.2rem;
   color: white;
-  background-color: hsl(0, 0%, 0%);
   text-align: center;
 }
 
 /* RESPONSIVE */
-
+/* 
 @media (max-width: 768px) {
   #image {
     width: 40rem;
     position: absolute;
     z-index: -1;
   }
-}
-
-@media (max-width: 425px) {
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  main { 
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  #image {
-    width: 100vw;
-    position: relative;
-  }
-}
+} */
